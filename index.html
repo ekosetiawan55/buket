@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Drive</title>
+  <title>Drive</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="header">
   <h3>My Drive</h3>
-  <input type="file" id="upload">
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search...">
+    <button onclick="toggleView()">Toggle View</button>
+    <input type="file" id="upload">
+  </div>
+</div>
+
+<div id="dropzone" class="dropzone">
+  Drag & Drop file di sini
+  <div class="progress" id="progress"></div>
 </div>
 
 <div id="grid" class="grid"></div>
 
 <div id="preview" class="preview">
-  <img id="preview-img">
+  <div id="preview-content"></div>
 </div>
 
 <script src="config.js"></script>
